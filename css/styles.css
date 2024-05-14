@@ -38,7 +38,9 @@ body {
 /* ========================================================================================================================================================
 common
 ======================================================================================================================================================== */
-
+.section {
+  padding: 96px 0;
+}
 .container {
   max-width: 320px;
   padding: 0 16px;
@@ -242,7 +244,6 @@ Hero
   background-color: #404bbf;
 }
 
-
 @media screen and (max-width: 767px) and (min-resolution: 192dpi) {
   .hero {
     background-image: url("../images/hero-mob@2x-min.jpg");
@@ -276,71 +277,149 @@ Hero
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url('../images/hero-table-min.jpg');
-  }
-@media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
-  .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("../images/hero-table@2x-min.jpg");
+      url("../images/hero-table-min.jpg");
   }
-}
-@media screen and (min-width: 768px) {
-  .main-title {
-    margin-bottom: 36px;
-    max-width: 496px;
-    font-size: 56px;
-    line-height: 1.07;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/hero-table@2x-min.jpg");
+    }
   }
-}
+  @media screen and (min-width: 768px) {
+    .main-title {
+      margin-bottom: 36px;
+      max-width: 496px;
+      font-size: 56px;
+      line-height: 1.07;
+    }
+  }
 
+  @media screen and (min-width: 1158px) {
+    .hero {
+      max-width: 1440px;
+      min-height: 600px;
+      padding: 188px 0 188px;
+      background-image: url("../images/hero-desk-min.jpg");
+    }
+  }
 
-@media screen and (min-width: 1158px) {
-  .hero {
-    max-width: 1440px;
-    min-height: 600px;
-    padding: 188px 0 188px;
-    background-image: url('../images/hero-desk-min.jpg');
+  @media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+    .hero {
+      background-image: url("../images/hero-desk@2x-min.jpg");
+    }
   }
-}
+  @media screen and (min-width: 1158px) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/hero-desk-min.jpg");
+    }
+    .main-title {
+      margin-bottom: 48px;
+      max-width: 496px;
+      font-size: 56px;
+      line-height: 1.07;
+    }
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/hero-desk@2x-min.jpg");
+    }
+  }
 
-@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
-  .hero {
-    background-image: url('../images/hero-desk@2x-min.jpg');
-  }
-}
-@media screen and (min-width: 1158px) {
-  .hero {
-    background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-       rgba(46, 47, 66, 0.7)),
-      url('../images/hero-desk-min.jpg');
-  }
-@media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url('../images/hero-desk@2x-min.jpg');
-  }
-}
-@media screen and (min-width: 1158px) {
-  .main-title {
-    margin-bottom: 48px;
-    max-width: 496px;
-    font-size: 56px;
-    line-height: 1.07;
-  }
-}
-/* ========================================================================================================================================================
+  /* ========================================================================================================================================================
 BENEFITS
 ======================================================================================================================================================== */
 
+  .benefits-list-item-icon {
+    display: none;
+  }
+  .benefits-list-title {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  
+  @media not screen and (min-width: 768px) {
+  .benefits-list-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+  .benefits-list-title {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .benefits-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media not screen and (min-width: 1158px) {
+  .benefits-list-text {
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .benefits-list-item {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+
+  .benefits-list-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    background-color: #f4f4fd;
+  }
+
+  .benefits-list-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
