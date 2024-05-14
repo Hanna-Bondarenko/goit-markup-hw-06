@@ -191,4 +191,43 @@ Hero
 .hero {
   max-width: 320px;
   min-height: 432px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: url("../images/hero-mob-min.jpg");
+  background-size: cover;
+}
+
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: url("../images/hero-mob@2x-min.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    min-height: 436px;
+    background-image: url("../images/hero-table-min.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: url("../images/hero-table@2x-min.jpg");
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .hero {
+    max-width: 1158px;
+    min-height: 600px;
+    background-image: url("../images/hero-desk-min.jpg");
+  }
+}
+
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: url("../images/hero-desk@2x-min.jpg");
+  }
 }
