@@ -36,10 +36,21 @@ body {
   background: #fff;
 }
 /* ========================================================================================================================================================
-common
+common mob
 ======================================================================================================================================================== */
 .section {
   padding: 96px 0;
+}
+
+.section-title {
+  margin-bottom: 72px;
+
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+  color: #2e2f42;
 }
 .container {
   max-width: 320px;
@@ -55,6 +66,66 @@ common
   .container {
     max-width: 1158px;
     padding: 0 15px;
+  }
+}
+.ourteam-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.ourteam-social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.ourteame-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  background-color: #4d5ae5;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ourteam-social-icon {
+  fill: #f4f4fd;
+}
+
+.ourteame-social-link:hover,
+.ourteame-social-link:focus {
+  background-color: #404bbf;
+}
+
+/* ========================================================================================================================================================
+common tab
+======================================================================================================================================================== */
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 767px;
+  }
+
+  @media not screen and (min-width: 1158px) {
+    .container-our-team {
+      max-width: 582px;
+    }
+  }
+}
+
+/* ========================================================================================================================================================
+common desk
+======================================================================================================================================================== */
+@media screen and (min-width: 1158px) {
+  .ourteam {
+    padding: 120px 0;
+  }
+
+  .container {
+    max-width: 1158px;
   }
 }
 /* ========================================================================================================================================================
@@ -283,97 +354,97 @@ Hero
       ),
       url("../images/hero-table-min.jpg");
   }
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .hero {
-      background-image: linear-gradient(
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
-        url("../images/hero-table@2x-min.jpg");
-    }
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero-table@2x-min.jpg");
   }
-  @media screen and (min-width: 768px) {
-    .main-title {
-      margin-bottom: 36px;
-      max-width: 496px;
-      font-size: 56px;
-      line-height: 1.07;
-    }
+}
+@media screen and (min-width: 768px) {
+  .main-title {
+    margin-bottom: 36px;
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
   }
+}
 
-  @media screen and (min-width: 1158px) {
-    .hero {
-      max-width: 1440px;
-      min-height: 600px;
-      padding: 188px 0 188px;
-      background-image: url("../images/hero-desk-min.jpg");
-    }
+@media screen and (min-width: 1158px) {
+  .hero {
+    max-width: 1440px;
+    min-height: 600px;
+    padding: 188px 0 188px;
+    background-image: url("../images/hero-desk-min.jpg");
   }
+}
 
-  @media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
-    .hero {
-      background-image: url("../images/hero-desk@2x-min.jpg");
-    }
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: url("../images/hero-desk@2x-min.jpg");
   }
-  @media screen and (min-width: 1158px) {
-    .hero {
-      background-image: linear-gradient(
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
-        url("../images/hero-desk-min.jpg");
-    }
-    .main-title {
-      margin-bottom: 48px;
-      max-width: 496px;
-      font-size: 56px;
-      line-height: 1.07;
-    }
+}
+@media screen and (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero-desk-min.jpg");
   }
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .hero {
-      background-image: linear-gradient(
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
-        url("../images/hero-desk@2x-min.jpg");
-    }
+  .main-title {
+    margin-bottom: 48px;
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
   }
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero-desk@2x-min.jpg");
+  }
+}
 
-  /* ========================================================================================================================================================
+/* ========================================================================================================================================================
 BENEFITS
 ======================================================================================================================================================== */
 
-  .benefits-list-item-icon {
-    display: none;
-  }
-  .benefits-list-title {
-    margin-bottom: 8px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-  }
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  
-  
-  @media not screen and (min-width: 768px) {
+.benefits-list-item-icon {
+  display: none;
+}
+.benefits-list-title {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@media not screen and (min-width: 768px) {
   .benefits-list-item:not(:last-child) {
     margin-bottom: 72px;
   }
@@ -421,5 +492,198 @@ BENEFITS
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
+  }
+}
+/* ========================================================================================================================================================
+TEAM
+======================================================================================================================================================== */
+.ourteam {
+  background-color: #f4f4fd;
+}
+
+.ourteam-list-item {
+  border-radius: 0px 0px 4px 4px;
+
+  background-color: #fff;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.container-name {
+  padding: 32px 16px;
+}
+
+.ourteam-list-title {
+  margin-bottom: 8px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--primary-dark-text-color);
+}
+
+.ourteam-list-text {
+  margin-bottom: 8px;
+
+  text-align: center;
+}
+
+.social-list {
+  justify-content: space-between;
+}
+
+@media not screen and (min-width: 768px) {
+  .ourteam-list-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+
+  .container-team {
+    max-width: 294px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ourteam-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+  }
+
+  .ourteam-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media screen and (min-width: 1158px) {
+  .ourteam-list-item {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+}
+/* ========================================================================================================================================================
+PORTFOLIO
+======================================================================================================================================================== */
+.portfolio {
+  padding: 48px 0;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-bottom: 48px;
+}
+
+.portfolio-list-item {
+  width: 100%;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  transform: translateY(101%);
+
+  background-color: rgba(77, 90, 229, 0.9);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-link:hover .card-overlay,
+.card-link:focus .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay-text {
+  padding: 40px 32px;
+
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+}
+
+.portfolio-name {
+  flex-grow: 1;
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
+.portfolio-list-title {
+  margin-bottom: 8px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.portfolio-list-text {
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+@media not screen and (min-width: 768px) {
+  .portfolio-list-item:not(:last-child) {
+    margin-bottom: 48px;
+  }
+}
+
+/* ------------------- page portfolio tablet ---------------------- */
+
+@media screen and (min-width: 768px) {
+  .section-portfolio {
+    padding: 64px 0 96px;
+  }
+
+  .filter-list {
+    justify-content: center;
+    margin-bottom: 64px;
+  }
+
+  .filter-btn {
+    padding: 12px 24px;
+  }
+
+  .portfolio-cards {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .portfolio-card {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+/* ------------------- page portfolio desktop ---------------------- */
+
+@media screen and (min-width: 1158px) {
+  .section-portfolio {
+    padding: 96px 0 120px;
+  }
+
+  .filter-list {
+    margin-bottom: 72px;
+  }
+
+  .portfolio-cards {
+    row-gap: 48px;
+  }
+
+  .portfolio-card {
+    width: calc((100% - 2 * 24px) / 3);
   }
 }
