@@ -289,7 +289,7 @@
 .text-color-logo {
   color: #4d5ae5;
 }
-.page-footer-container {
+.footer-container {
   display: flex;
   align-items: baseline;
 }
